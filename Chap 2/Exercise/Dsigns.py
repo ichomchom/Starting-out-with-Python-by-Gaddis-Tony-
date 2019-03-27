@@ -1,0 +1,160 @@
+import turtle
+
+#set up turtle
+turtle.penup()
+turtle.hideturtle()
+
+#first pic
+turtle.goto(-400,300)
+turtle.pendown()
+turtle.left(45)
+turtle.forward(60)
+turtle.right(90)
+turtle.forward(120)
+turtle.left(90)
+turtle.forward(60)
+turtle.left(90)
+turtle.forward(60)
+turtle.left(90)
+turtle.forward(120)
+turtle.right(90)
+turtle.forward(60)
+
+#2 triangles
+turtle.penup()
+turtle.goto(350,270)
+turtle.pendown()
+turtle.setheading(0)
+turtle.forward(120)
+turtle.left(120)
+turtle.forward(120)
+turtle.left(120)
+turtle.forward(120)
+turtle.setheading(0)
+turtle.forward(120)
+turtle.left(150)
+turtle.forward(70)
+turtle.left(60)
+turtle.forward(70)
+
+#cube
+
+    #first square
+
+turtle.penup()
+turtle.goto(-400,100)
+botL = turtle.pos()
+turtle.pendown()
+turtle.setheading(0)
+turtle.forward(60)
+botR = turtle.pos()
+turtle.setheading(90)
+turtle.forward(60)
+topR = turtle.pos()
+turtle.setheading(0)
+turtle.backward(60)
+topL = turtle.pos()
+turtle.setheading(270)
+turtle.forward(60)
+
+    #straight for second square
+turtle.goto(topL)
+turtle.setheading(0)
+turtle.right(45)
+turtle.forward(85)
+
+turtle.penup()
+turtle.goto(topR)
+turtle.pendown()
+turtle.setheading(0)
+turtle.right(45)
+turtle.forward(85)
+
+turtle.penup()
+turtle.goto(botR)
+turtle.pendown()
+turtle.setheading(0)
+turtle.right(45)
+turtle.forward(85)
+
+turtle.penup()
+turtle.goto(botL)
+turtle.pendown()
+turtle.setheading(0)
+turtle.right(45)
+turtle.forward(85)
+
+    #second square
+botL = turtle.pos()
+turtle.pendown()
+turtle.setheading(0)
+turtle.forward(60)
+botR = turtle.pos()
+turtle.setheading(90)
+turtle.forward(60)
+topR = turtle.pos()
+turtle.setheading(0)
+turtle.backward(60)
+topL = turtle.pos()
+turtle.setheading(270)
+turtle.forward(60)
+
+#olympic rings
+turtle.setheading(0)
+turtle.penup()
+turtle.goto(200,100)
+def circle():
+    turtle.pendown()
+    turtle.circle(30)
+    turtle.penup()
+    turtle.forward(90)    
+for i in range(3):
+    circle()
+turtle.goto(245,75)
+for i in range(2):
+    circle()
+
+
+turtle.penup()
+turtle.goto(-250,-200)
+turtle.pendown()
+turtle.circle(30)
+
+turtle.penup()
+turtle.setheading(90)
+turtle.forward(30)
+turtle.pendown()
+mid = turtle.pos()
+
+turtle.forward(120)
+turtle.setheading(0)
+turtle.penup()
+turtle.backward(10)
+turtle.write('North')
+
+turtle.goto(mid)
+turtle.pendown()
+turtle.forward(120)
+turtle.penup()
+turtle.forward(10)
+turtle.right(90)
+turtle.forward(5)
+turtle.write('East')
+
+turtle.goto(mid)
+turtle.pendown()
+turtle.forward(120)
+turtle.penup()
+turtle.forward(10)
+turtle.right(90)
+turtle.forward(5)
+turtle.write('South')
+
+turtle.goto(mid)
+turtle.pendown()
+turtle.forward(120)
+turtle.penup()
+turtle.forward(30)
+turtle.left(90)
+turtle.forward(5)
+turtle.write('West')
